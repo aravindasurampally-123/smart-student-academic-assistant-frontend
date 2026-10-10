@@ -1,0 +1,51 @@
+.notifications-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.back-button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-bottom: 25px;
+}
+
+.back-button:hover {
+  background: #1d4ed8;
+}
+
+.notifications-page h1 {
+  margin-bottom: 25px;
+  color: #1e293b;
+}
+
+.notification-card {
+  max-width: 600px;
+  background: white;
+  padding: 22px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.notification-card h3 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
+.notification-card p {
+  margin-bottom: 0;
+  color: #475569;
+  font-size: 16px;
+}
+
+.no-notifications {
+  color: #64748b;
+  font-size: 18px;
+}
