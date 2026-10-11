@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Dashboard.css";
+import { API_BASE_URL } from "./api";
 
 function Dashboard() {
   const [dashboard, setDashboard] = useState(null);
@@ -14,7 +15,7 @@ function Dashboard() {
       return;
     }
 
-    fetch(`http://localhost:8080/api/dashboard/${studentId}`, {
+    fetch(`${API_BASE_URL}/api/dashboard/${studentId}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

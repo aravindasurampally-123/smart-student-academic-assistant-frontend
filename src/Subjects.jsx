@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Subjects.css";
+import { API_BASE_URL } from "./api";
 
 function Subjects() {
   const [subjects, setSubjects] = useState([]);
@@ -8,7 +9,7 @@ function Subjects() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/api/subjects", {
+    fetch(`${API_BASE_URL}/api/subjects`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

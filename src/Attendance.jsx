@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import "./Attendance.css";
+import { API_BASE_URL } from "./api";
 
 function Attendance() {
   const [attendance, setAttendance] = useState([]);
@@ -15,7 +16,7 @@ function Attendance() {
       return;
     }
 
-    fetch(`http://localhost:8080/api/attendance/student/${studentId}`, {
+    fetch(`${API_BASE_URL}/api/attendance/student/${studentId}`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

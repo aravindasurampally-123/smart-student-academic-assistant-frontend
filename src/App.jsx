@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import { API_BASE_URL } from "./api";
 
 import Dashboard from "./Dashboard";
 import Attendance from "./Attendance";
@@ -36,7 +37,7 @@ function Login() {
     try {
 
       const response = await fetch(
-        "http://localhost:8080/api/students/login",
+        `${API_BASE_URL}/api/students/login`,
         {
           method: "POST",
 

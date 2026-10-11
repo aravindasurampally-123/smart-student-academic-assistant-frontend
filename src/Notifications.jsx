@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Notifications.css";
+import { API_BASE_URL } from "./api";
 
 function Notifications() {
   const [notifications, setNotifications] = useState([]);
@@ -15,7 +16,7 @@ function Notifications() {
     }
 
     fetch(
-      `http://localhost:8080/api/notifications/student/${studentId}`,
+      `${API_BASE_URL}/api/notifications/student/${studentId}`,
       {
         method: "GET",
         headers: {

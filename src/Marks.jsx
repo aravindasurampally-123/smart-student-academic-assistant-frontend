@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Marks.css";
+import { API_BASE_URL } from "./api";
 
 function Marks() {
   const [marks, setMarks] = useState([]);
@@ -8,7 +9,7 @@ function Marks() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/api/marks", {
+    fetch(`${API_BASE_URL}/api/marks`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./StudyProgress.css";
+import { API_BASE_URL } from "./api";
 
 function StudyProgress() {
   const [progress, setProgress] = useState([]);
@@ -8,7 +9,7 @@ function StudyProgress() {
   useEffect(() => {
     const token = localStorage.getItem("token");
 
-    fetch("http://localhost:8080/api/study-progress", {
+    fetch(`${API_BASE_URL}/api/study-progress`, {
       method: "GET",
       headers: {
         Authorization: `Bearer ${token}`,

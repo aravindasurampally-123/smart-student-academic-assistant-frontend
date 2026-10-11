@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Timetable.css";
+import { API_BASE_URL } from "./api";
 
 function Timetable() {
   const [timetable, setTimetable] = useState([]);
@@ -15,7 +16,7 @@ function Timetable() {
     }
 
     fetch(
-      `http://localhost:8080/api/timetable/student/${studentId}`,
+      `${API_BASE_URL}/api/timetable/student/${studentId}`,
       {
         method: "GET",
         headers: {
