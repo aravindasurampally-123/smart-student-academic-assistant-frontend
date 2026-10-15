@@ -1,0 +1,1 @@
+export const API_BASE_URL = "https://smart-student-academic-assistant-backend-9szc.onrender.com";
